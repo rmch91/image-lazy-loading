@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+.title {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #999999;
+    border-top: 1px solid #999999;
+  }
+
+  &__data {
+    padding: 20px;
+  }
+}
+
+pre {
+  display: flex;
+  justify-content: center;
+}
+
+code {
+  background-color: #303030;
+  color: #e1e1f0;
+  padding-right: 20px;
+}

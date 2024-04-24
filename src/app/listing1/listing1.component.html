@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <h2 class="title">Listing 1</h2>
+
+  <pre>
+    <code>
+      {{code}}
+    </code>
+  </pre>
+
+  <ul class="list">
+    <li *ngFor="let product of products; let i = index" class="list__item">
+      <picture>
+        <source *ngFor="let source of [1,2,3]"
+          [srcset]="'https://source.unsplash.com/random/200x300?sig=' + (source + 20 + i)"
+          [media]="'(min-width: ' + (source * 100) + 'px)'" />
+        <img [loading]="loading" [src]="'https://source.unsplash.com/random/200x300?sig=' + i" alt="Alt"
+          class="list__img" />
+      </picture>
+
+      <div class="list__data">
+        <p>Product {{i + 1}}</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, omnis facilis necessitatibus officia minima
+          quam
+          assumenda beatae voluptatem adipisci similique repellat unde, labore, ipsam quae. Ducimus esse magnam iusto
+          blanditiis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil pariatur cupiditate fugit laborum explicabo,
+          libero accusantium laudantium molestias in ex magni eligendi est doloremque blanditiis temporibus nisi. Sed,
+          aliquam doloribus?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et vero quod soluta necessitatibus. Dolores,
+          consequatur quidem neque nisi voluptatum at et assumenda quisquam quod alias suscipit in. Ullam, soluta
+          adipisci!</p>
+      </div>
+    </li>
+  </ul>
+</div>
